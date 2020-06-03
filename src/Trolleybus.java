@@ -1,6 +1,6 @@
 
 
-public class Trolleybus extends AbstractTransport {
+public class Trolleybus extends AbstractTransport implements Fueling {
     public Trolleybus (String model, int capacity, int speed, int consumption, int mileage, int powerReserve, String fuelType, int transportPrice) { //добавть остальные параметры
         super( model, capacity, speed, consumption, mileage, powerReserve, fuelType, transportPrice); //тоже добавить остальные парамеры
         this.sayModel();
@@ -18,10 +18,17 @@ public class Trolleybus extends AbstractTransport {
     }
 
     @Override
-    public void fueling () {
+    public void FuelingOn() {
         this.powerReserve++;
         System.out.println("I get power from cable");
     }
+
+
+    /*@Override
+    public void fueling () {
+        this.powerReserve++;
+        System.out.println("I get power from cable");
+    }*/
 }
 
 

@@ -37,7 +37,7 @@ public abstract class AbstractTransport {
     }
 
     public abstract void ride();  //ехать
-    public abstract void fueling(); //заправка
+    //public abstract void fueling(); //заправка
 
     public void sayModel(){
         System.out.println("My type is " + this.model + " capacity " + this.capacity + " speed " + this.speed  ); //+ "capacity" + this.capacity + "speed" + this.speed + "consumption" + this.consumption

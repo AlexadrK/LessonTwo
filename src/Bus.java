@@ -1,5 +1,5 @@
 
-public class Bus extends AbstractTransport {
+public class Bus extends AbstractTransport implements Fueling{
     public Bus(String model, int capacity, int speed, int consumption, int mileage, int powerReserve, String fuelType, int transportPrice) { //добавть остальные параметры
         super( model, capacity, speed, consumption, mileage, powerReserve, fuelType, transportPrice); //тоже добавить остальные парамеры
         this.sayModel();
@@ -16,8 +16,13 @@ public class Bus extends AbstractTransport {
             this.capacity--;
         }
 
-        @Override
+    @Override
+    public void FuelingOn() {
+        this.powerReserve--;
+    }
+
+       /* @Override
         public void fueling () {
             this.powerReserve--;
-        }
+        }*/
     }
