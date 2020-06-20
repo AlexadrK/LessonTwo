@@ -9,7 +9,37 @@ public abstract class AbstractTransport {
     private String model; //тип транспорта
     private  int transportPrice; //цена еденицы транспорта
 
+    public int getCapacity() {
+        return capacity;
+    }
 
+    public int getSpeed() {
+        return speed;
+    }
+
+    public int getConsumption() {
+        return consumption;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public int getPowerReserve() {
+        return powerReserve;
+    }
+
+    public String getFuelType() {
+        return fuelType;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public int getTransportPrice() {
+        return transportPrice;
+    }
 
     public AbstractTransport(String model, int capacity, int speed, int consumption, int mileage, int powerReserve, String fuelType, int transportPrice) {
         this.capacity = capacity; //вместимость

@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class TransportDepo {
     public static void main(String[] args) {
@@ -26,9 +27,17 @@ public class TransportDepo {
 
         for (AbstractTransport abstractTransport :depo){
             abstractTransport.sayModel();
-            abstractTransport.fueling();
+            //abstractTransport.fueling();
             abstractTransport.ride();
         }
+
+        for (AbstractTransport abstractTransport :depo){
+            // System.out.println(abstractTransport.getClass().getName().equals("Bus"));
+            // if((abstractTransport.getCapacity()==50)&&(abstractTransport.getClass().toString())) System.out.println(abstractTransport.getModel());
+        }
+
+        Arrays.stream(depo).filter(x->x.getCapacity()==50).forEach(c-> System.out.println(c.getModel()));
+
 
     }
 
